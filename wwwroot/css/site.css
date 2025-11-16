@@ -115,6 +115,7 @@ body {
     margin-top: 1.75rem;
     display: flex;
     gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .btn-primary,
@@ -440,3 +441,11 @@ body {
         font-size: 1rem;
     }
 }
+
+.btn-resume {
+    border-color: #a855f7;
+}
+
+    .btn-resume:hover {
+        border-color: #ec4899;
+    }
