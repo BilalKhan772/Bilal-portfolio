@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Bilal Alam Khan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="container-fluid d-flex justify-content-end align-items-center header-inner">
+            <!-- Sirf right side nav, koi brand / logo nahi -->
+            <nav class="main-nav">
+                <!-- Ye links sirf desktop par dikhenge -->
+                <a href="/" class="nav-link nav-desktop-only">Home</a>
+                <a href="#about" class="nav-link nav-desktop-only">About</a>
+                <a href="#skills" class="nav-link nav-desktop-only">Skills</a>
+
+                <!-- Ye dono desktop + mobile dono par -->
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
