@@ -9,15 +9,21 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="container-fluid d-flex justify-content-end align-items-center header-inner">
-            <!-- Sirf right side nav, koi brand / logo nahi -->
+        <div class="container-fluid d-flex justify-content-between align-items-center header-inner">
+            <!-- Theme toggle (left) -->
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon theme-icon-sun">☀</span>
+                <span class="theme-icon theme-icon-moon">🌙</span>
+            </button>
+
+            <!-- Navigation (right) -->
             <nav class="main-nav">
-                <!-- Ye links sirf desktop par dikhenge -->
+                <!-- Desktop only -->
                 <a href="/" class="nav-link nav-desktop-only">Home</a>
                 <a href="#about" class="nav-link nav-desktop-only">About</a>
                 <a href="#skills" class="nav-link nav-desktop-only">Skills</a>
 
-                <!-- Ye dono desktop + mobile dono par -->
+                <!-- Desktop + mobile -->
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>

@@ -1,5 +1,21 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    // Scroll reveal for elements with .animated-fade
+    /* THEME TOGGLE */
+    var root = document.documentElement;
+    var toggle = document.querySelector(".theme-toggle");
+    var storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme === "light") {
+        root.classList.add("theme-light");
+    }
+
+    if (toggle) {
+        toggle.addEventListener("click", function () {
+            var isLight = root.classList.toggle("theme-light");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        });
+    }
+
+    /* SCROLL REVEAL */
     var fadeEls = document.querySelectorAll(".animated-fade");
 
     if ("IntersectionObserver" in window) {
@@ -9,7 +25,6 @@
                     if (entry.isIntersecting) {
                         entry.target.classList.add("visible");
                     } else {
-                        // viewport se bahar jayen to visible hata do
                         entry.target.classList.remove("visible");
                     }
                 });
@@ -23,7 +38,6 @@
             observer.observe(el);
         });
     } else {
-        // Fallback: agar browser support nahi karta to sab visible
         fadeEls.forEach(function (el) {
             el.classList.add("visible");
         });
